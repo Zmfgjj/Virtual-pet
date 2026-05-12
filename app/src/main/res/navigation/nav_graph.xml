@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_home">
+
+    <!-- Tambahkan fragment di sini nanti setelah file fragment dibuat -->
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="id.jeremy.projectkelompok.HomeFragment"
+        android:label="Home" />
+
+    <fragment
+        android:id="@+id/navigation_chat"
+        android:name="id.jeremy.projectkelompok.ChatFragment"
+        android:label="Chat" />
+
+    <fragment
+        android:id="@+id/navigation_voice"
+        android:name="id.jeremy.projectkelompok.VoiceFragment"
+        android:label="Voice" />
+
+    <fragment
+        android:id="@+id/navigation_camera"
+        android:name="id.jeremy.projectkelompok.CameraFragment"
+        android:label="Camera" />
+
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="id.jeremy.projectkelompok.SettingsFragment"
+        android:label="Settings" />
+</navigation>

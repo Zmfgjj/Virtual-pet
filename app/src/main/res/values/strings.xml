@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">ProjectKelompok</string>
+    <string name="spirit_character">Spirit Character</string>
+    <string name="mood_happy">Mood: Happy</string>
+    <string name="friendship_level">Friendship Level</string>
+    <string name="chat_history">Spirit: Halo, ada yang bisa aku bantu?</string>
+    <string name="hint_message">Ketik pesan...</string>
+    <string name="send">Kirim</string>
+    <string name="voice_prompt">Tekan tombol untuk bicara</string>
+    <string name="start_voice">Mulai Bicara</string>
+    <string name="capture_photo">Ambil Foto</string>
+    <string name="home_fragment">Home Fragment</string>
+    <string name="chat_fragment">Chat Fragment</string>
+    <string name="voice_fragment">Voice Fragment</string>
+    <string name="camera_fragment">Camera Fragment</string>
+    <string name="settings_fragment">Settings Fragment</string>
+</resources>

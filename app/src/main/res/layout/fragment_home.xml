@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Character Asset Placeholder -->
+    <ImageView
+        android:id="@+id/img_spirit"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="50dp"
+        android:contentDescription="@string/spirit_character"
+        android:src="@android:drawable/sym_def_app_icon" />
+
+    <TextView
+        android:id="@+id/tv_mood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/mood_happy"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_friendship"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/friendship_level" />
+
+    <ProgressBar
+        android:id="@+id/pb_friendship"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:max="100"
+        android:progress="50" />
+
+</LinearLayout>
