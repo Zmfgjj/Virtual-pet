@@ -25,6 +25,8 @@ public class HomeFragment extends Fragment {
         viewModel.getMood().observe(getViewLifecycleOwner(), mood -> tvMood.setText("Mood: " + mood));
         viewModel.getFriendship().observe(getViewLifecycleOwner(), pbFriendship::setProgress);
 
+        view.findViewById(R.id.btn_feed).setOnClickListener(v -> viewModel.feedSpirit());
+
         return view;
     }
 }
