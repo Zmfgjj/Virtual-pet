@@ -13,6 +13,11 @@ public class SharedViewModel extends ViewModel {
     public LiveData<Integer> getFriendship() { return friendship; }
     public void updateFriendship(int increment) {
         int current = friendship.getValue() != null ? friendship.getValue() : 0;
-        friendship.setValue(current + increment);
+        friendship.setValue(Math.min(100, current + increment));
+    }
+
+    public void feedSpirit() {
+        updateFriendship(10);
+        setMood("Full & Happy");
     }
 }

@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/27643077/README.md)
 # Virtual Pet Companion
 
 Aplikasi companion fantasy sederhana dengan fitur chat, voice interaction, dan kamera.

@@ -39,4 +39,11 @@
         android:max="100"
         android:progress="50" />
 
+    <Button
+        android:id="@+id/btn_feed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Beri Makan" />
+
 </LinearLayout>
