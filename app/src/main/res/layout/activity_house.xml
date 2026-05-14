@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Background Rumah -->
+    <ImageView
+        android:id="@+id/imgHouse"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/intro1"
+        android:scaleType="centerCrop"/>
+
+
+
+    <ImageView
+        android:id="@+id/imgSpirit"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="200dp"
+        android:layout_marginStart="105dp"
+        android:src="@drawable/spirite_open" />
+
+    <!-- Dialog Spirit -->
+    <TextView
+        android:id="@+id/txtDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="...Ada seseorang di luar?"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:fontFamily="@font/pixel_sans_serif"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="120dp"
+        android:layout_marginStart="25dp"
+        android:shadowColor="#000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4"/>
+
+    <!-- Continue -->
+    <TextView
+        android:id="@+id/btnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="> continue"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:fontFamily="@font/pixel_sans_serif"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:layout_marginStart="30dp"/>
+
+</RelativeLayout>

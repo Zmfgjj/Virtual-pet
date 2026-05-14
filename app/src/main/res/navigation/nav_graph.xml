@@ -4,7 +4,6 @@
     android:id="@+id/nav_graph"
     app:startDestination="@id/navigation_home">
 
-    <!-- Tambahkan fragment di sini nanti setelah file fragment dibuat -->
     <fragment
         android:id="@+id/navigation_home"
         android:name="id.jeremy.projectkelompok.HomeFragment"

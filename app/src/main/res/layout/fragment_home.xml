@@ -1,49 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainBg"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_horizontal"
-    android:orientation="vertical"
-    android:padding="16dp">
-
-    <!-- Character Asset Placeholder -->
-    <ImageView
-        android:id="@+id/img_spirit"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:layout_marginTop="50dp"
-        android:contentDescription="@string/spirit_character"
-        android:src="@android:drawable/sym_def_app_icon" />
+    android:background="@drawable/bg_utama">
 
     <TextView
-        android:id="@+id/tv_mood"
+        android:id="@+id/txtTap"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/mood_happy"
-        android:textSize="18sp" />
+        android:text="Tap anywhere to continue"
+        android:textSize="12sp"
+        android:textColor="#FFFFFF"
 
-    <TextView
-        android:id="@+id/tv_friendship"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="@string/friendship_level" />
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:fontFamily="@font/pixel_sans_serif"
 
-    <ProgressBar
-        android:id="@+id/pb_friendship"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:max="100"
-        android:progress="50" />
+        android:shadowColor="#000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4"/>
 
-    <Button
-        android:id="@+id/btn_feed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Beri Makan" />
-
-</LinearLayout>
+</RelativeLayout>

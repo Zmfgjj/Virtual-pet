@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@drawable/bg_dialog">
+
+    <!-- Handle line for visual -->
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:background="#8D6E63"
+        android:backgroundTint="@null"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Siapa namamu?"
+        android:textColor="#4E342E"
+        android:textSize="20sp"
+        android:fontFamily="@font/pixel_sans_serif"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <EditText
+        android:id="@+id/editName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#4E342E"
+        android:textColor="#4E342E"
+        android:fontFamily="@font/pixel_sans_serif"
+        android:hint="Ketik di sini..."
+        android:textColorHint="#884E342E"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:padding="12dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSaveName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="OK"
+        android:background="@drawable/button"
+        android:backgroundTint="@null"
+        android:textColor="#FFF3E0"
+        android:textSize="18sp"
+        android:fontFamily="@font/pixel_sans_serif"
+        android:padding="12dp"/>
+
+</LinearLayout>

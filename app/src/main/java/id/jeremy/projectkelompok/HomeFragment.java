@@ -1,32 +1,47 @@
 package id.jeremy.projectkelompok;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ProgressBar;
-import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class HomeFragment extends Fragment {
+
     @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater,
+                             @Nullable ViewGroup container,
+                             @Nullable Bundle savedInstanceState) {
+
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
-        SharedViewModel viewModel = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
-        
-        TextView tvMood = view.findViewById(R.id.tv_mood);
-        ProgressBar pbFriendship = view.findViewById(R.id.pb_friendship);
+        BottomNavigationView bottomNav =
+                requireActivity().findViewById(R.id.bottom_navigation);
+        bottomNav.setVisibility(View.GONE);
 
-        viewModel.getMood().observe(getViewLifecycleOwner(), mood -> tvMood.setText("Mood: " + mood));
-        viewModel.getFriendship().observe(getViewLifecycleOwner(), pbFriendship::setProgress);
+        view.setOnClickListener(v -> {
 
-        view.findViewById(R.id.btn_feed).setOnClickListener(v -> viewModel.feedSpirit());
+            Intent intent = new Intent(requireActivity(), IntroActivity.class);
+            startActivity(intent);
+
+        });
 
         return view;
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+
+        BottomNavigationView bottomNav =
+                requireActivity().findViewById(R.id.bottom_navigation);
+        bottomNav.setVisibility(View.VISIBLE);
     }
 }

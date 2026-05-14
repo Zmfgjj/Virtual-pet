@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Background -->
+    <RelativeLayout
+        android:id="@+id/bgIntro"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/grass_1"/>
+
+    <!-- Text Cerita -->
+    <TextView
+        android:id="@+id/txtStory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Di dunia Lunaria,\nspirit hidup sendiri\nmenunggu seseorang..."
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:fontFamily="@font/pixel_sans_serif"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="120dp"
+        android:gravity="start"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/btnContinue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="> continue"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:fontFamily="@font/pixel_sans_serif"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="260dp"
+        android:visibility="gone"/>
+
+    <!-- Tombol Start -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnStart"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Start Game"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/button"
+        android:backgroundTint="@null"
+        android:textColor="#FFF3E0"
+        android:textSize="18sp"
+        android:fontFamily="@font/pixel_sans_serif"
+        android:padding="12dp"/>
+
+</RelativeLayout>
