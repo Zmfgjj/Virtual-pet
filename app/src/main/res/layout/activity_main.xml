@@ -1,124 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:clipChildren="false"
-    android:clipToPadding="false">
+    android:layout_height="match_parent">
 
-    <!-- FULL SCREEN CONTENT -->
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/nav_host_fragment"
-        android:name="androidx.navigation.fragment.NavHostFragment"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+    <!-- Top Left Icon -->
+    <ImageView
+        android:id="@+id/btnNavHome"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="16dp"
+        android:contentDescription="Home"
+        android:src="@drawable/ic_home" />
 
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:navGraph="@navigation/nav_graph"
-        app:defaultNavHost="true"/>
+    <ImageView
+        android:id="@+id/btnNavChat"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_toEndOf="@id/btnNavHome"
+        android:layout_alignParentTop="true"
+        android:layout_margin="16dp"
+        android:contentDescription="Chat"
+        android:src="@drawable/ic_chat" />
 
-    <!-- FLOATING HUD (OVERLAY ICONS - NO SIDEBAR) -->
-    <FrameLayout
-        android:id="@+id/side_nav"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ImageView
+        android:id="@+id/btnNavVoice"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_toEndOf="@id/btnNavChat"
+        android:layout_alignParentTop="true"
+        android:layout_margin="16dp"
+        android:contentDescription="Voice"
+        android:src="@drawable/ic_voice1" />
 
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="120dp"
+    <ImageView
+        android:id="@+id/btnNavCamera"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_toEndOf="@id/btnNavVoice"
+        android:layout_alignParentTop="true"
+        android:layout_margin="16dp"
+        android:contentDescription="Camera"
+        android:src="@drawable/ic_camera" />
 
-        android:clipChildren="false"
-        android:clipToPadding="false"
-
-        android:elevation="10dp"
-
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="start"
-            android:rotation="-1.5">
-
-
-
-            <!-- HOME -->
-            <ImageView
-                android:id="@+id/btnNavHome"
-                android:layout_width="52dp"
-                android:layout_height="52dp"
-                android:layout_marginBottom="16dp"
-                android:src="@drawable/ic_home1"
-                android:background="@drawable/nav_icon_glow"
-                android:padding="10dp"
-                android:clickable="true"
-                android:focusable="true"
-                android:alpha="0.95"/>
-
-            <!-- CHAT -->
-            <ImageView
-                android:id="@+id/btnNavChat"
-                android:layout_width="52dp"
-                android:layout_height="52dp"
-                android:layout_marginBottom="16dp"
-                android:src="@drawable/ic_chat1"
-                android:background="@drawable/nav_icon_glow"
-                android:padding="10dp"
-                android:clickable="true"
-                android:focusable="true"
-                android:alpha="0.95"/>
-
-            <!-- VOICE -->
-            <ImageView
-                android:id="@+id/btnNavVoice"
-                android:layout_width="52dp"
-                android:layout_height="52dp"
-                android:layout_marginBottom="16dp"
-                android:src="@drawable/ic_voice1"
-                android:background="@drawable/nav_icon_glow"
-                android:padding="10dp"
-                android:clickable="true"
-                android:focusable="true"
-                android:alpha="0.95"/>
-
-            <!-- CAMERA -->
-            <ImageView
-                android:id="@+id/btnNavCamera"
-                android:layout_width="52dp"
-                android:layout_height="52dp"
-                android:src="@drawable/ic_camera1"
-                android:background="@drawable/nav_icon_glow"
-                android:padding="10dp"
-                android:clickable="true"
-                android:focusable="true"
-                android:alpha="0.95"/>
-
-        </LinearLayout>
-
-    </FrameLayout>
-
-    <!-- SETTINGS (FLOATING TOP RIGHT) -->
     <ImageView
         android:id="@+id/btnNavSettings"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="20dp"
-        android:src="@drawable/ic_settings1"
-        android:background="@drawable/nav_icon_glow"
-        android:padding="10dp"
-        android:clickable="true"
-        android:focusable="true"
-        android:alpha="0.95"
-        android:elevation="10dp"
+        android:layout_toEndOf="@id/btnNavCamera"
+        android:layout_alignParentTop="true"
+        android:layout_margin="16dp"
+        android:contentDescription="Settings"
+        android:src="@drawable/ic_settings1" />
 
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+    <!-- Main Content -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/btnNavHome"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_graph" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Hidden layouts for other functionality if needed -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <TextView android:id="@+id/tvFriendship" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:id="@+id/tvMood" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <ProgressBar android:id="@+id/progressBar" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:id="@+id/tvDialog" android:layout_width="match_parent" android:layout_height="wrap_content" />
+        <EditText android:id="@+id/etInput" android:layout_width="match_parent" android:layout_height="wrap_content" />
+        <Button android:id="@+id/btnSend" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Send" />
+    </LinearLayout>
+
+</RelativeLayout>

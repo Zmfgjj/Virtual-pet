@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/etPetName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nama Pet" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pilih Archetype"
+        android:layout_marginTop="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button android:id="@+id/btnNight" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Malam" />
+        <Button android:id="@+id/btnSunny" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Sunny" />
+        <Button android:id="@+id/btnSea" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Sea" />
+        <Button android:id="@+id/btnLab" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Lab" />
+    </LinearLayout>
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Energy" />
+    <com.google.android.material.slider.Slider android:id="@+id/sliderEnergy" android:layout_width="match_parent" android:layout_height="wrap_content" android:valueFrom="1" android:valueTo="10" />
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Warmth" />
+    <com.google.android.material.slider.Slider android:id="@+id/sliderWarmth" android:layout_width="match_parent" android:layout_height="wrap_content" android:valueFrom="1" android:valueTo="10" />
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Humor" />
+    <com.google.android.material.slider.Slider android:id="@+id/sliderHumor" android:layout_width="match_parent" android:layout_height="wrap_content" android:valueFrom="1" android:valueTo="10" />
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Curiosity" />
+    <com.google.android.material.slider.Slider android:id="@+id/sliderCuriosity" android:layout_width="match_parent" android:layout_height="wrap_content" android:valueFrom="1" android:valueTo="10" />
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Independence" />
+    <com.google.android.material.slider.Slider android:id="@+id/sliderIndependence" android:layout_width="match_parent" android:layout_height="wrap_content" android:valueFrom="1" android:valueTo="10" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mulai Pet AI"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>
