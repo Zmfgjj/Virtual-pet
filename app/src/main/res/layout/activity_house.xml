@@ -5,24 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- Background Rumah -->
+    <!-- Background + spirit -->
     <ImageView
         android:id="@+id/imgHouse"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/intro1"
-        android:scaleType="centerCrop"/>
-
-
-
-    <ImageView
-        android:id="@+id/imgSpirit"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="200dp"
-        android:layout_marginStart="105dp"
-        android:src="@drawable/spirite_open" />
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_open" />
 
     <!-- Dialog Spirit -->
     <TextView

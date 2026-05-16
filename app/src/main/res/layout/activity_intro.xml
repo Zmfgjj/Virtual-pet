@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:text="Di dunia Lunaria,\nspirit hidup sendiri\nmenunggu seseorang..."
         android:textColor="#FFFFFF"
-        android:textSize="22sp"
+        android:textSize="20sp"
         android:fontFamily="@font/pixel_sans_serif"
         android:layout_marginStart="40dp"
         android:layout_marginTop="120dp"
@@ -34,8 +34,12 @@
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         android:fontFamily="@font/pixel_sans_serif"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="260dp"
+
+        android:layout_below="@id/txtStory"
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginTop="20dp"
+
         android:visibility="gone"/>
 
     <!-- Tombol Start -->
@@ -47,11 +51,13 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="60dp"
+
         android:background="@drawable/button"
         android:backgroundTint="@null"
+
         android:textColor="#FFF3E0"
         android:textSize="18sp"
         android:fontFamily="@font/pixel_sans_serif"
-        android:padding="12dp"/>
 
+        android:padding="12dp"/>
 </RelativeLayout>

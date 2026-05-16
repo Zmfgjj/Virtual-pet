@@ -1,22 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical">
+    android:background="@drawable/bg_home">
 
+    <!-- 🌸 PREVIEW FOTO -->
     <ImageView
         android:id="@+id/img_captured"
         android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:contentDescription="@string/spirit_character"
-        android:scaleType="centerCrop" />
+        android:layout_height="380dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:scaleType="centerCrop"
+        android:background="#33FFFFFF"
+        android:padding="4dp"
+        android:src="@drawable/open_sp"/>
 
+    <!-- ✨ GLOW -->
+    <View
+        android:layout_width="320dp"
+        android:layout_height="400dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/spirit_glow"
+        android:alpha="0.10"/>
+
+    <!-- 🌙 SPIRIT CHARACTER (INI YANG KURANG) -->
+    <ImageView
+        android:id="@+id/imgSpiritCamera"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/open_sp"
+        android:layout_below="@id/img_captured"/>
+
+    <!-- 📷 BUTTON -->
     <Button
         android:id="@+id/btn_capture"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Ambil Foto" />
+        android:layout_width="220dp"
+        android:layout_height="58dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/imgSpiritCamera"
+        android:layout_marginTop="26dp"
+        android:text="Share Your World"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/button"/>
 
-</LinearLayout>
+    <!-- 🌙 REACTION -->
+    <TextView
+        android:id="@+id/txtReaction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="90dp"
+        android:padding="16dp"
+        android:text=""
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:background="#66000000"
+        android:fontFamily="@font/pixel_sans_serif"/>
+
+</RelativeLayout>

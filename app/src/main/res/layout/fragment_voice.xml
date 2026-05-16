@@ -2,20 +2,41 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:gravity="center"
-    android:orientation="vertical">
+    android:background="#111">
 
+    <!-- SPIRIT IMAGE -->
+    <ImageView
+        android:id="@+id/imgSpiritVoice"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/open_sp"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- RESULT USER -->
     <TextView
         android:id="@+id/tv_voice_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/voice_prompt" />
+        android:text="Suara kamu akan muncul di sini"
+        android:textColor="#fff"
+        android:padding="10dp"/>
 
-    <Button
-        android:id="@+id/btn_mic"
+    <!-- SPIRIT RESPONSE -->
+    <TextView
+        android:id="@+id/tv_spirit_response"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/start_voice" />
+        android:text="Spirit siap mendengar..."
+        android:textColor="#fff"
+        android:padding="10dp"/>
 
+    <!-- MIC -->
+    <ImageView
+        android:id="@+id/btn_mic"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_voice1"
+        android:layout_marginTop="20dp"/>
 </LinearLayout>

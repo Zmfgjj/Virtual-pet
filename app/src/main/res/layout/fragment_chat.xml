@@ -1,29 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:background="@drawable/bg_chat_magic"
+    android:padding="18dp">
 
-    <TextView
-        android:id="@+id/tv_chat_history"
+    <!-- 🌙 TITLE -->
+    <LinearLayout
+        android:id="@+id/titleContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginTop="26dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🌙 Lunaria Connection"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:fontFamily="@font/pixel_sans_serif"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Spirit sedang mendengarkan..."
+            android:textColor="#CCFFFFFF"
+            android:textSize="12sp"
+            android:layout_marginTop="4dp"/>
+    </LinearLayout>
+
+    <!-- 🌌 CHAT HISTORY -->
+    <ScrollView
+        android:id="@+id/chatScroll"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:text="@string/chat_history" />
+        android:layout_height="match_parent"
 
-    <EditText
-        android:id="@+id/et_message"
+        android:layout_below="@id/titleContainer"
+        android:layout_above="@id/inputContainer"
+
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:id="@+id/tv_chat_history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+
+            android:lineSpacingExtra="6dp"
+
+            android:padding="18dp"
+
+            android:background="#55000000"
+
+            android:fontFamily="@font/pixel_sans_serif"/>
+    </ScrollView>
+
+    <!-- ✨ INPUT AREA -->
+    <LinearLayout
+        android:id="@+id/inputContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/hint_message"
-        android:inputType="text"
-        android:autofillHints="name" />
 
-    <Button
-        android:id="@+id/btn_send"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/send" />
+        android:layout_alignParentBottom="true"
 
-</LinearLayout>
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- 🌸 INPUT -->
+        <EditText
+            android:id="@+id/et_message"
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:layout_weight="1"
+
+            android:hint="Kirim pesan ke spirit..."
+            android:textColorHint="#AAFFFFFF"
+
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+
+            android:background="@drawable/input_magic"
+
+            android:fontFamily="@font/pixel_sans_serif"/>
+
+        <!-- 🌟 SEND BUTTON -->
+        <ImageView
+            android:id="@+id/btn_send"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+
+            android:layout_marginStart="12dp"
+
+            android:src="@drawable/ic_star_send"
+
+            android:background="@drawable/nav_icon_glow"
+
+            android:padding="12dp"
+
+            android:clickable="true"
+            android:focusable="true"/>
+    </LinearLayout>
+
+</RelativeLayout>
